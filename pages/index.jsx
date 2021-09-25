@@ -56,7 +56,7 @@ const home = () => {
       </Head>
       <body>
         <Header
-          className="background-image"
+          
           style={{ position: "fixed", zIndex: 3, width: "100%" }}
         >
           <Menu
@@ -90,7 +90,7 @@ const home = () => {
               marginLeft: "25%",
             }}>
               <a href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">
-            <Button type="primary" >
+            <Button icon={<LinkedinOutlined />} style={{'backgroundColor': "#02d783", 'borderColor': 'black', 'color': '#FDFFFF', 'borderRadius': '15px'}} >
           LinkedIn
         </Button>
         </a>
@@ -101,91 +101,15 @@ const home = () => {
           <Row>
             <Col className="main-title" span={12} offset={6}>
               <h1>
-                RACCONTA TE STESSO
-                <br /> ESPRIMI LE TUE EMOZIONI
+                
               </h1>
             </Col>
           </Row>
         </main>
+        <Content>cazzo</Content>
       </body>
-      <Footer>
-        <Row>
-          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-            <img src="/images/pesca.png"></img>
-          </Col>
-          <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-            <h6 style={{ fontSize: "30px", fontFamily: "sans-serif" }}>
-              Contatti
-            </h6>
-            <icon>
-              <PhoneOutlined />
-              <a
-                style={{ color: "black !important" }}
-                target="_blank"
-                href="tel:3883289985"
-              >
-                ⠀+39 388 328 9985
-              </a>
-              <br />
-              <MailOutlined />
-              <a target="_blank" href="mailto:moceri.flavio@gmail.com">
-                ⠀moceri.flavio@gmail.com
-              </a>
-              <br />
-              <ChromeOutlined />
-              <a target="_blank" href="https://flaviomoceri.it/">
-                ⠀flaviomoceri.it
-              </a>
-            </icon>
-          </Col>
-          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-            <h6 style={{ fontSize: "30px", fontFamily: "sans-serif" }}>
-              Meditation
-            </h6>
-            <p>
-              Il sito web 'meditation', nasce dalla voglia di un ragazzino di
-              poter conservare le proprie emozioni per sentirisi libero di
-              creare e realizzare i propri sogni, divertendosi apprendendo ogni
-              giorno. La programmazione spacca!!!
-            </p>
-            <Row justify="end">
-              <Col span={3}>
-                <icon>
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/flaviomoceri_/"
-                  >
-                    <InstagramOutlined />
-                  </a>
-                </icon>
-              </Col>
-              <Col span={3}>
-                <icon>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7?originalSubdomain=it"
-                  >
-                    <LinkedinOutlined />
-                  </a>
-                </icon>
-              </Col>
-              <Col span={3}>
-                <icon>
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/flavio.moceri.9"
-                  >
-                    <FacebookOutlined />
-                  </a>
-                </icon>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-        <Divider />
-        <p style={{ textAlign: "center" }}>
-          Meditation ©2021 Created by Flavio Moceri
-        </p>
+      <Footer className="footer">
+       <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">@flaviomoceri</a></h7>
       </Footer>
     </Layout>
   );
