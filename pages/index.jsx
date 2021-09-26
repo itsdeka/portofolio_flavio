@@ -18,29 +18,30 @@ const { Meta } = Card;
 
 const { Header, Content, Footer } = Layout;
 
+const contentStyle = {
+  height: '370px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+};
+
+
+const changeBackground = () => {
+  if (window.scrollY >= 80) {
+    setNavbar(true);
+  } else {
+    setNavbar(false);
+  }
+};
+
+useEffect(() => {
+  window.addEventListener("scroll", changeBackground);
+  return () => window.removeEventListener("scroll", changeBackground);
+});
+
 const home = () => {
   const [navbar, setNavbar] = useState(false);
 
-  const contentStyle = {
-    height: '370px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-  };
- 
-
-  const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
-    return () => window.removeEventListener("scroll", changeBackground);
-  });
 
   return (
     <Layout id="home">
@@ -86,7 +87,7 @@ const home = () => {
               marginLeft: "25%",
             }}>
               <a href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">
-            <Button icon={<LinkedinOutlined />} style={{'backgroundColor': "#02d783", 'borderColor': 'black', 'color': '#FDFFFF', 'borderRadius': '15px'}} >
+            <Button icon={<LinkedinOutlined />} rel="noreferrer" style={{'backgroundColor': "#02d783", 'borderColor': 'black', 'color': '#FDFFFF', 'borderRadius': '15px'}} >
           LinkedIn
         </Button>
         </a>
@@ -190,7 +191,7 @@ const home = () => {
         </Content>
       </body>
       <Footer className="footer">
-       <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">@flaviomoceri</a></h7>
+       <h7>Coded with 💚 by <a className="text_footer" rel="noreferrer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">@flaviomoceri</a></h7>
       </Footer>
     </Layout>
   );
