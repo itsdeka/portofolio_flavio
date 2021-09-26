@@ -85,7 +85,7 @@ const home = () => {
             style={{
               marginLeft: "25%",
             }}>
-              <a href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/">
+              <a href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">
             <Button icon={<LinkedinOutlined />} style={{'backgroundColor': "#02d783", 'borderColor': 'black', 'color': '#FDFFFF', 'borderRadius': '15px'}} >
           LinkedIn
         </Button>
@@ -186,11 +186,10 @@ const home = () => {
   </Row>
     </div>
   </Carousel>
-  <h1>cazzo</h1>
         </Content>
       </body>
       <Footer className="footer">
-       <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/">@flaviomoceri</a></h7>
+       <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">@flaviomoceri</a></h7>
       </Footer>
     </Layout>
   );
