@@ -30,6 +30,11 @@ a {
   height: 96px !important;
   line-height: 96px !important;
 }
+.background-image2 {
+  background-image: url('/sfondo.png')!important;
+  background-size: cover!important;
+  background-blend-mode: darken;
+}
 .footer {
   background-image: url('/sfondo_footer.png')!important;
   height: 190px;
@@ -84,13 +89,83 @@ textarea.ant-input {
    border-radius: 30px !important;
 }
 .main-title {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 130px;
-  text-align: center !important;
-  font-size: xx-large;
-  font-family: horizon !important;
+  margin-top: 250px;
+  font-size: 2.8rem !important;
+  color: rgb(246, 246, 246) !important;
+  opacity: 0.98 !important;
+  font-weight: 400;
+  line-height: 20px;
+  
 
+}
+.ant-carousel .slick-list .slick-slide.slick-active {
+  pointer-events: none !important;
+}
+.title-paragraph {
+  color: black !important;
+  text-align: center ;
+  margin-left: auto ;
+  margin-right: auto ;
+  font-size: 35px ;
+  font-weight: 600;
+}
+.boxshadow_card{
+  box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%)
+}
+.ant-col-6 {
+  display: block;
+  -moz-box-flex: 0;
+  flex: 0 0 15% !important;
+  max-width: 25%;
+}
+.main-scroll{
+  line-height: 10;
+}
+main h3.animated{
+  animation-duration: 2.5s;
+animation-iteration-count: infinite;
+}
+.main-icon {
+  margin-top: 140px;
+  display: inline-grid;
+  margin-left: 20px !important;
+  color: rgb(119, 119, 121);
+  font-size: 2rem;
+  position: fixed;
+}
+.text-carousel {
+  color: black !important;
+}
+.ant-carousel .slick-dots li.slick-active button {
+  background: black !important;
+  opacity: 1;
+}
+.ant-carousel .slick-dots li button {
+  display: block;
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  color: transparent;
+  font-size: 0;
+  background: grey !important;
+  border: 0;
+  border-radius: 1px;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.3;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.main-paragraph {
+  font-size: 17px;
+    color: rgb(246, 246, 246);
+    opacity: 0.85;
+    line-height: 30px;
+}
+.main-subtitle{
+  font-size: 1.6rem !important;
+  color: rgb(119, 119, 121) !important;
+  font-weight: 300;
 }
 h1, h3, h4, h5, h2 {
   margin-top: 0;
@@ -99,12 +174,22 @@ h1, h3, h4, h5, h2 {
   font-weight: 500;
 }
 .anticon {
-  font-size: 20px;
   margin-left: auto;
   margin-right: auto;
   
 }
-
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .button {
   background-color:#02d783 !important;
   margin-top: 10px;

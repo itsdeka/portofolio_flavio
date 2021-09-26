@@ -9,6 +9,7 @@ import { CloudFilled } from "@ant-design/icons";
 import { Modal, Button } from "antd";
 import { Divider } from "antd";
 import { Calendar, Alert, Badge } from "antd";
+import { Carousel } from 'antd';
 import { Progress } from "antd";
 import moment from "moment";
 import {
@@ -21,8 +22,12 @@ import {
   InstagramOutlined,
   FacebookOutlined,
   LinkedinOutlined,
-  DownloadOutlined
+  DownloadOutlined,
+  GithubOutlined
 } from "@ant-design/icons";
+
+
+const { Meta } = Card;
 
 
 const { SubMenu } = Menu;
@@ -32,7 +37,12 @@ const { Header, Content, Footer } = Layout;
 const home = () => {
   const [navbar, setNavbar] = useState(false);
 
-
+  const contentStyle = {
+    height: '370px',
+    color: '#fff',
+    lineHeight: '160px',
+    textAlign: 'center',
+  };
  
 
   const changeBackground = () => {
@@ -53,6 +63,8 @@ const home = () => {
       <Head>
         <title>Flavio Moceri's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+        <link rel="stylesheet" href="animate.min.css"/>
       </Head>
       <body>
         <Header
@@ -77,7 +89,7 @@ const home = () => {
               <a href="#home"><img src="logo_piccolo.png"/></a>
             </Menu.Item>
             <Menu.Item key="1">
-              <a href="#home">About me</a>
+              <a href="#home">About</a>
             </Menu.Item>
             <Menu.Item key="2">
               <a href="#calendario">Projects</a>
@@ -97,16 +109,100 @@ const home = () => {
         </Menu.Item>
           </Menu>
         </Header>
-        <main className="background-image">
+        <main className="background-image2">
           <Row>
-            <Col className="main-title" span={12} offset={6}>
-              <h1>
-                
-              </h1>
+            <Col className="main-icon" span={6}>
+              <div className="main-icon">
+            <LinkedinOutlined  />
+            <GithubOutlined style={{marginTop: 30}}/>
+            <InstagramOutlined style={{marginTop: 30}}/>
+            </div>
+            </Col>
+            <Col span={7}>
+              <div>
+            <h1 className='main-title'>Hi, I'm Flavio</h1>
+            <h6 className='main-subtitle'>Sviluppatore Web</h6>
+            <p className="main-paragraph">I design and code beautifully simple things, and I love what I do.</p>
+            <div className='main-scroll'>
+            <h3 class='animated bounce' style={{fontSize: 24, color: '#F6F6F6'}}>Scroll down⠀<img style={{width: 20}} src="scroll-down.svg"/></h3>
+            </div>
+            </div>
             </Col>
           </Row>
         </main>
-        <Content>cazzo</Content>
+        <Content>
+          <h1 className="title-paragraph">Competenze</h1>
+        <Carousel style={{marginTop: 50}} autoplay loop>
+    <div> 
+    <Row style={contentStyle}>
+    <Col xs={{ span: 5, offset: 4 }} lg={{ span: 5, offset: 4 }}>
+    <Card
+    hoverable
+    className='boxshadow_card'
+    style={{ width: 280, borderRadius: 40 }}
+    cover={<img alt="react" src="react.png" />}
+  >
+    <Meta title="ReactJS" description='Skill - Intermedia' />
+  </Card>
+    </Col>
+    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 1 }}>
+    <Card
+    hoverable
+    className='boxshadow_card'
+    style={{ width: 280, borderRadius: 40 }}
+    cover={<img alt="html" src="html1.png" />}
+  >
+    <Meta title="Html" description="Skill - Avanzata" />
+  </Card>
+    </Col>
+    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 1 }}>
+    <Card
+    hoverable
+    className='boxshadow_card'
+    style={{ width: 280, borderRadius: 40 }}
+    cover={<img alt="css" src="css1.png" />}
+  >
+    <Meta title="CSS" description="Skill - Avanzata" />
+  </Card>
+    </Col>
+  </Row>
+    </div>
+    <div>
+    <Row style={contentStyle}>
+    <Col xs={{ span: 5, offset: 4 }} lg={{ span: 5, offset: 4 }}>
+    <Card
+    hoverable
+    className='boxshadow_card'
+    style={{ width: 280, borderRadius: 40 }}
+    cover={<img alt="python" src="python1.png" />}
+  >
+    <Meta title="Python" description='Skill - Intermedia' />
+  </Card>
+    </Col>
+    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 1 }}>
+    <Card
+    hoverable
+    className='boxshadow_card'
+    style={{ width: 280, borderRadius: 40 }}
+    cover={<img alt="json" src="json1.png" />}
+  >
+    <Meta title="Json" description="Skill - Base" />
+  </Card>
+    </Col>
+    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 1 }}>
+    <Card
+    hoverable
+    className='boxshadow_card'
+    style={{ width: 280, borderRadius: 40 }}
+    cover={<img alt="mongo" src="mongo1.png" />}
+  >
+    <Meta title="MongoDB" description="Skill - Base" />
+  </Card>
+    </Col>
+  </Row>
+    </div>
+  </Carousel>
+        </Content>
       </body>
       <Footer className="footer">
        <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">@flaviomoceri</a></h7>
