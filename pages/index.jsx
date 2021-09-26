@@ -1,37 +1,21 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Layout, Menu} from "antd";
 import { Row, Col } from "antd";
 import React, { useState, useEffect } from "react";
-import { Input, Space } from "antd";
 import { Card } from "antd";
-import { CloudFilled } from "@ant-design/icons";
-import { Modal, Button } from "antd";
-import { Divider } from "antd";
-import { Calendar, Alert, Badge } from "antd";
+import {Button } from "antd";
 import { Carousel } from 'antd';
-import { Progress } from "antd";
-import moment from "moment";
+
 import {
-  FrownOutlined,
-  SmileOutlined,
-  MehOutlined,
-  PhoneOutlined,
-  MailOutlined,
-  ChromeOutlined,
   InstagramOutlined,
-  FacebookOutlined,
   LinkedinOutlined,
-  DownloadOutlined,
   GithubOutlined
 } from "@ant-design/icons";
 
 
 const { Meta } = Card;
 
-
-const { SubMenu } = Menu;
-const { TextArea } = Input;
 const { Header, Content, Footer } = Layout;
 
 const home = () => {
@@ -101,7 +85,7 @@ const home = () => {
             style={{
               marginLeft: "25%",
             }}>
-              <a href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">
+              <a href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/">
             <Button icon={<LinkedinOutlined />} style={{'backgroundColor': "#02d783", 'borderColor': 'black', 'color': '#FDFFFF', 'borderRadius': '15px'}} >
           LinkedIn
         </Button>
@@ -206,7 +190,7 @@ const home = () => {
         </Content>
       </body>
       <Footer className="footer">
-       <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/" target="_blank">@flaviomoceri</a></h7>
+       <h7>Coded with 💚 by <a className="text_footer" href="https://www.linkedin.com/in/flavio-moceri-6b2a141b7/">@flaviomoceri</a></h7>
       </Footer>
     </Layout>
   );
